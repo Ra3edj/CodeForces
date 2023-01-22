@@ -85,4 +85,26 @@ int main()
 	cout << m * n / 2;
 } 
 
-6) 
+6) Submit solution
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+	int n, x = 0;
+	cin >> n;
+    string statements;
+	for (int i = 0; i < n; i++) {
+		cin >> statements;
+		if(statements == "X++" || statements == "++X") {
+			x++;
+		}
+		else if (statements == "--X" || statements == "X--") {
+		  x--;
+		}
+ 
+	}
+	cout << x;
+} 
+
+7) 
