@@ -33,4 +33,21 @@ int main() {
 
 }
 
-3) 
+3) A. Team
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int count = 0;
+	for (int i = 0; i < n; i++) {
+		int Petya , Vasya , Tonya;
+		cin >> Petya >> Vasya >> Tonya;
+		if (Petya + Vasya + Tonya > 1) {
+			count++;
+	   }
+	}
+	cout << count;
+
+}
