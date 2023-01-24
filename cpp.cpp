@@ -126,3 +126,26 @@ int main()
     return 0;
 } 
 
+8) 112A - Petya and Strings
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string a, b;
+    cin >> a >> b;
+    for (int i = 0; i < a.size(); i++) {
+        int num1 = tolower(a[i]);
+        int num2 = tolower(b[i]);
+        if (num1 > num2) {
+            cout << 1 << endl;
+            return 0;
+        }
+        else if (num1 < num2) {
+            cout << -1 << endl;
+            return 0;
+        }
+    }
+    cout << 0 << endl;
+
+} 
