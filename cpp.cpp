@@ -149,3 +149,35 @@ int main()
     cout << 0 << endl;
 
 } 
+
+8)339A - Helpful Maths
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	string s, news = "";
+	vector<int>v;
+	cin >> s;
+	for (int i = 0; i < s.size(); i++) {
+		if (i % 2 == 0) {
+			v.push_back(s[i]);
+			sort(v.begin(), v.end());
+		}
+	}
+	for (int j = 0; j < v.size(); j++) {
+		if (v[j] == 49) {
+			news += "+1";
+		}
+		else if (v[j] == 50) {
+			news += "+2";
+		}
+		else{
+				news += "+3";
+		}
+	}
+	news.erase(0, 1);
+		cout << news;
+} 
+
+9) Word Capitalization
