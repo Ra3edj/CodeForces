@@ -181,3 +181,23 @@ int main()
 } 
 
 9) Word Capitalization
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	string s , news;
+	cin >> s;
+	for (int i = 0; i < s.size(); i++) {
+		if (i == 0) {
+			news += toupper(s[i]);
+		}
+		else {
+			news += s[i];
+		}
+	}
+	cout << news;
+} 
+
+10) Boy or Girl
+
