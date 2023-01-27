@@ -220,3 +220,5 @@ int main()
 		cout << "IGNORE HIM!";
 	}
 } 
+
+11) A. Stones on the Table
