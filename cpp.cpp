@@ -241,4 +241,23 @@ int main()
 }
 
 12) A. Bear and Big Brother
+#include <bits/stdc++.h>
+using namespace std;
 
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+	for (int i = 0; i <= b; i++) {
+		if (a <= b) {
+			a *= 3;
+			b *= 2;
+		}
+		else {
+			cout << i;
+			return 0;
+		}
+	}
+}
+
+13) 
