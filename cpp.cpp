@@ -277,4 +277,20 @@ int main()
 	}
 }
 
-14) 
+14) 617A - Elephant
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	double x;
+	cin >> x;
+	if ((x / 5) == ceil(x / 5)) {
+		cout << (x / 5);
+	}
+	else {
+		cout << int((x / 5) + 1);
+	}
+}
+
+15)
