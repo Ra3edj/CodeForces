@@ -222,3 +222,23 @@ int main()
 } 
 
 11) A. Stones on the Table
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n, counter = 0;
+	vector<int>v;
+	string s;
+	cin >> n >> s;
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i] == s[i + 1]) {
+			counter++;
+		}
+	}
+	cout << counter;
+}
+
+12) A. Bear and Big Brother
+
