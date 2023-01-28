@@ -246,18 +246,35 @@ using namespace std;
 
 int main()
 {
-	int a, b;
+	int a, b , counter = 0;
 	cin >> a >> b;
-	for (int i = 0; i <= b; i++) {
-		if (a <= b) {
-			a *= 3;
-			b *= 2;
-		}
-		else {
-			cout << i;
-			return 0;
-		}
+	while (b >= a) {
+		a *= 3;
+		b *= 2;
+		counter++;
+	}
+	cout << counter;
+	
+}
+
+13) 546A - Soldier and Bananas
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int k, n, w, j = 0, price = 0;
+	cin >> k >> n >> w;
+	for (int i = 1; i <= w; i++) {
+		j += k * i;
+	}
+	price = j - n;
+	if (price >= 0) {
+		cout << price;
+	}
+	else {
+		cout << 0;
 	}
 }
 
-13) 
+14) 
