@@ -293,4 +293,81 @@ int main()
 	}
 }
 
-15)
+15) A. Word
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	string s;
+	cin >> s;
+	int upper = 0, lower = 0;
+	for (int i = 0; i < s.size(); i++) {
+		if (toupper(s[i]) == s[i]) {
+			upper++;
+		}
+		else {
+			lower++;
+		}
+	}
+	if (upper > lower) {
+		transform(s.begin(), s.end(), s.begin(), ::toupper);
+		cout << s;
+	}
+	else {
+		transform(s.begin(), s.end(), s.begin(), ::tolower);
+		cout << s;
+	}
+}
+
+16) A. Wrong Subtraction
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n, k; 
+	cin >> n >> k;
+	while (k > 0) {
+		if (n % 10 == 0) {
+			n = n / 10;
+		}
+		else {
+			n = n - 1;
+		}
+		k--;
+	}
+	cout << n;
+}
+
+17) A. Nearly Lucky Number
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	long long n;
+	int counter = 0 , lucky = 0;
+	cin >> n;
+	string j = to_string(n);
+	for (int i = 0; i < j.size(); i++) {
+		if (j[i] == 52 || j[i] == 55) { /* 4 = 52 && 7 = 55 ascii table*/
+			counter++;
+		}
+	}
+	string jj = to_string(counter);
+	for (int k = 0; k < jj.size(); k++) {
+		if (jj[k] == 52 || jj[k] == 55) {
+			lucky++;
+		}
+		else {
+			cout << "NO";
+			return 0;
+		}
+	}
+		cout << "YES";
+}
+
+18) 
