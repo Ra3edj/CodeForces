@@ -370,4 +370,76 @@ int main()
 		cout << "YES";
 }
 
-18) 
+18) 734A - Anton and Danik
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n , A = 0, D = 0;
+	string s;
+	cin >> n >> s;
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i] == 65) {
+			A++;
+		}
+		else {
+			D++;
+		}
+	}
+	if (A > D) {
+		cout << "Anton";
+	}
+	else if (D > A) {
+		cout << "Danik";
+	}
+	else {
+		cout << "Friendship";
+	}
+}
+
+19) A. Tram
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n,a,b,counter = 0;
+	vector<int>v;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> a >> b;
+		counter += b - a;
+		v.push_back(counter);
+	}
+	sort(v.begin(), v.end());
+	cout << v[v.size() - 1];
+}
+
+20) A. Translation
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	string s, t;
+	cin >> s >> t;
+	int i, j = t.size() - 1;
+	int counter = 0;
+	for (i = 0; i < s.size(); i++) {
+		if (s[i] != t[j]) {
+			cout << "NO";
+			return 0;
+		}
+		else {
+			counter++;
+		}
+		j--;
+	}
+	cout << "YES";
+}
+
+21) B. Queue at the School
+
