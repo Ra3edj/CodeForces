@@ -479,4 +479,20 @@ int main()
 	}
 }
 
-23) 
+23) 959A - Mahmoud and Ehab and the even-odd game
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	if (n % 2 == 0) {
+		cout << "Mahmoud";
+	}
+	else {
+		cout << "Ehab";
+	}
+}
+
+24) 
