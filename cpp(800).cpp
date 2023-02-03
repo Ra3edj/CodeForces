@@ -495,4 +495,53 @@ int main()
 	}
 }
 
-24) 
+24) A. Special Permutation
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int t ,n;
+	cin >> t;
+	vector<int>v;
+	while (t--) {
+		cin >> n;
+		for (int i = 0; i < n; i++) {
+			v.push_back(i);
+		}
+		for (int j = 1; j < v.size(); j++) {
+			swap(v[j], v[j - 1]);
+		}
+		for (int k = 0; k < v.size(); k++) {
+			cout << v[k] + 1 << " ";
+		}
+		v.clear();
+		cout << endl;
+	}
+}
+
+25) 1358A - Park Lighting
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    int n, m;
+	cin >> n >> m;
+	if ((m * n) % 2 == 0) {
+		cout << ((m * n) / 2) << endl;
+	}
+	else {
+		cout << ((m * n) / 2) + 1 << endl;
+	}
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+}
+
+26) 
