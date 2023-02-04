@@ -544,4 +544,126 @@ int main()
 	}
 }
 
-26) 
+26) 1722A - Spell Check
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+	int n, counter = 0;
+	string s , t = "Timur";
+	cin >> n >> s;
+	sort(s.begin(), s.end());
+	sort(t.begin(), t.end());
+	if (s == t) {
+		cout << "YES" << endl;
+	}
+	else {
+		cout << "NO" << endl;
+	}
+	
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+
+
+27) 1676B - Equal Candies
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve() {
+	int n , a , min , counter = 0;
+	vector<int>v;
+	cin >> n;
+	while (n--) {
+		cin >> a;
+		v.push_back(a);
+	}
+    min = *min_element(v.begin(), v.end());
+	for (int i = 0; i < v.size(); i++) {
+		if (v[i] != min) {
+			counter += (v[i] - min);
+		}
+	}
+	v.clear();
+	cout << counter << endl;
+}
+ 
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+28) 1542A - Odd Set
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+	int n, a , counter1 = 0, counter2 = 0;
+	vector<int>v;
+	cin >> n;
+	n *= 2;
+	while (n--) {
+		cin >> a;
+		v.push_back(a);
+	}
+	if (v[0] % 2 == 0) {
+		counter1++;
+	}
+	else {
+		counter2++;
+	}
+	for (int i = 1; i < v.size(); i++) {
+		if (i < v.size() / 2) {
+			if (v[i] % 2 == 0) {
+				counter1++;
+			}
+			else {
+				counter2++;
+			}
+		}
+		else {
+			if (v[i] % 2 == 0) {
+				counter1++;
+			}
+			else {
+				counter2++;
+			}
+		}
+	}
+	if (counter1 == counter2) {
+		cout << "Yes" << endl;
+	}
+	else {
+		cout << "No" << endl;
+	}
+	v.clear();
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+29) 
+
+
