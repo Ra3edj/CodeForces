@@ -692,6 +692,80 @@ int main()
 	return 0;
 }
 
-30) 
+30) 1296A - Array with Odd Sum
 
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve() {
+	int n,a,counter = 0 , odd = 0 , even = 0;
+	cin >> n;
+	while (n--) {
+		cin >> a;
+		counter += a;
+		if (a % 2 == 0) {
+			even++;
+		}
+		else {
+			odd++;
+		}
+ 
+	}
+	if (counter % 2 == 1 || (even && odd)) {
+		cout << "Yes" << "\n";
+	}
+	else {
+		cout << "No" << "\n";
+	}
+}
+ 
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
 
+31) 1385B - Restore the Permutation by Merger
+#include <bits/stdc++.h>
+using namespace std;
+void remove(vector<int>& v)
+{
+	auto end = v.end();
+	for (auto it = v.begin(); it != end; ++it) {
+		end = remove(it + 1, end, *it);
+	}
+ 
+	v.erase(end, v.end());
+}
+void solve() {
+	int n, a;
+	cin >> n;
+	vector<int>v;
+	n *= 2;
+	while (n--) {
+		cin >> a;
+		v.push_back(a);
+	}
+	remove(v);
+	for (int i = 0; i < v.size(); i++) {
+		cout << v[i] << " ";
+	}
+	v.clear();
+	cout << "\n";
+}
+ 
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+32)
