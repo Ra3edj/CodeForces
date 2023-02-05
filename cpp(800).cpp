@@ -664,6 +664,34 @@ int main()
 	return 0;
 }
 
-29) 
+29) 1760A - Medium Number
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve() {
+	int n, j, k;
+	cin >> n >> j >> k;
+	if ((n > j || k > j )&& (j > k || j > n)){
+		cout << j << "\n";
+	}
+	else if((j > n || k > n)&& (n > k || n > j)){
+		cout << n << "\n";
+	}
+	else {
+		cout << k << "\n";
+	}
+}
+ 
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+30) 
 
 
