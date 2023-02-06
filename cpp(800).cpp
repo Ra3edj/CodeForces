@@ -768,4 +768,70 @@ int main()
 	return 0;
 }
 
-32)
+32) 1703B - ICPC Balloons
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+	int n;
+	string s;
+	cin >> n >> s;
+	vector<int>v;
+	for (int i = 0; i < n; i++) {
+		v.push_back(s[i]);
+	}
+	sort(v.begin(), v.end());
+	v.erase(unique(v.begin(), v.end()) , v.end());
+	cout << (n * 2) - (n - v.size()) << "\n";
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+33) 1722B - Colourblindness
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+	int n, R = 0, G_B = 0;
+	cin >> n;
+	char arr[2][100];
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < n; j++) {
+			cin >> arr[i][j];
+		}
+	}
+		for (int j = 0; j < n; j++) {
+			if ((arr[0][j] == arr[1][j] - 5) || (arr[0][j] == arr[1][j] + 5) || (arr[0][j] == arr[1][j])) {
+				G_B++;
+			}
+			else {
+				R++;
+			}
+	}
+	if (R) {
+		cout << "NO" << "\n";
+	}
+	else {
+		cout << "YES" << "\n";
+	}
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+34)
