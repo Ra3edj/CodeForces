@@ -834,4 +834,41 @@ int main()
 	return 0;
 }
 
-34)
+34) 1579A - Casimir's String Solitaire
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve() {
+	string s;
+	int A = 0, B = 0, C = 0;
+	cin >> s;
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i] == 65) {
+			A++;
+		}
+		else if (s[i] == 66) {
+			B++;
+		}
+		else {
+			C++;
+		}
+	}
+	if ((A == B && C == 0) || (B == C && A == 0) || (B - C == A) || (B - A == C)) {
+		cout << "YES" << "\n";
+	}
+	else {
+		cout << "NO" << "\n";
+	}
+}
+ 
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+35) 
