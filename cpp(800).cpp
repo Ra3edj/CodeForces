@@ -871,4 +871,66 @@ int main()
 	return 0;
 }
 
-35) 
+35) 1742B - Increasing
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve() {
+	int n , a;
+	cin >> n;
+	vector<int>v;
+	for (int i = 0; i < n; i++) {
+		cin >> a;
+		v.push_back(a);
+	}
+	sort(v.begin(), v.end());
+	v.erase(unique(v.begin(), v.end()), v.end());
+	if (v.size() != n) {
+		cout << "NO" << "\n";
+	}
+	else {
+		cout << "YES" << "\n";
+	}
+ 
+}
+ 
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+36) 1368A - C+=
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+	int a, b, n , counter = 1;
+	cin >> a >> b >> n;
+	while ((a + b) <= n) {
+		if (a > b) {
+			b += a;
+		}
+		else {
+			a += b;
+		}
+		counter++;
+	}
+	cout << counter << "\n";
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
+
+37) 
