@@ -933,4 +933,25 @@ int main()
 	return 0;
 }
 
-37) 
+37) 1772A - A+B?
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+void solve() {
+	int a, b;
+	char c;
+	cin >> a >> c >> b;
+	cout << a + b << "\n";
+ 
+}
+ 
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+	return 0;
+}
