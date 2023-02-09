@@ -955,3 +955,31 @@ int main()
 	}
 	return 0;
 }
+
+38) (A) Digits Sum
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ 
+ 
+void solve() {
+	int n , counter = 0 , mod; 
+	cin >> n;
+	mod = n % 10;
+	if (mod < 9) {
+		counter = n / 10;
+	}
+	else {
+		counter = n / 10 + 1;
+	}
+	cout << counter << '\n';
+}
+ 
+int main()
+{
+	int t; 
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+}
