@@ -983,3 +983,67 @@ int main()
 		solve();
 	}
 }
+
+39) 1669C - Odd/Even Increments
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ 
+void solve() {
+	int n , counter1 = 0 , counter2 = 0;
+	cin >> n;
+	int arr[50];
+	vector<int>v;
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+	for (int i = 0; i < n; i++) {
+		if (arr[i] % 2 == 0) {
+			counter1++;
+		}
+		else {
+			counter2++;
+		}
+		
+	}
+	if (counter1 == n || counter2 == n) {
+		cout << "YES" << "\n";
+	}
+	else {
+		counter1 = 0;
+		counter2 = 0;
+			for (int i = 0; i < n; i++) {
+				if (i % 2 == 0 || i == 0) {
+					v.push_back(arr[i] + 1);
+				}
+				else {
+					v.push_back(arr[i]);
+				}
+			}
+			for (int i = 0; i < v.size(); i++) {
+ 
+				if (v[i] % 2 == 0) {
+					counter1++;
+				}
+				else {
+					counter2++;
+				}
+			}
+				if ((counter1 == n) || (counter2 == n)) {
+					cout << "YES" << "\n";
+				}
+				else {
+					cout << "NO" << "\n";
+				}
+		}
+	v.clear();
+}
+ 
+int main()
+{
+	int t; 
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+}
