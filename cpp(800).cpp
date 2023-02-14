@@ -1048,4 +1048,72 @@ int main()
 	}
 }
 
-40) 
+40) 1511A - Review Site
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+void solve() {
+	int n, r , su1 = 0, sd1 = 0 , su2 = 0;
+	cin >> n;
+	while(n > 0){
+		cin >> r;
+		if(r == 1){
+	    	su1++;
+		}
+		else if(r == 2){
+		    sd1++;  
+		}
+		else{
+		  if(su1 < sd1){
+		     su2++;    	  
+        	}else{
+	         su1++;
+	     	}	
+		}
+		n--;
+	}
+	cout << su1 + su2 << "\n";
+}
+
+int main()
+{
+	int t; 
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+}
+
+41) 1487A - Arena
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+	int n , a;
+	cin >> n;
+	vector<int>v;
+	vector<int>r;
+	for(int i = 0; i < n; i++){
+	  cin >> a;
+	  v.push_back(a);
+	}
+	for(int j = 0; j < v.size(); j++){
+	  int min = *min_element(v.begin(), v.end());
+	  if(v[j] != min){
+	   	r.push_back(a);
+	 }
+	}
+	cout << r.size() << "\n";
+}
+
+int main()
+{
+	int t; 
+	cin >> t;
+	while (t--) {
+		solve();
+	}
+}
+
+42) 
