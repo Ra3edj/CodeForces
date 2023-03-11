@@ -1135,4 +1135,46 @@ int main()
 	}
 }
 
-43) 
+43) 1200A - Hotelier
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+	int n;
+	string s;
+	vector<int> v(10);
+	cin >> n >> s;
+	for (int i = 0; i < n; i++) {
+		if (s[i] == 'L') {
+			for (int k = 0; k < 10; k++) {
+				if (v[k] == 0) {
+					v[k] = 1;
+					break;
+				}
+			}
+		}
+		else if (s[i] == 'R') {
+			for (int k = 9; k >= 0; k--) {
+				if (v[k] == 0) {
+					v[k] = 1;
+					break;
+				}
+			}
+		}
+		else {
+			int j = int(s[i]) - 48;
+			v[j] = 0;
+		}
+	}
+		for (int i = 0; i < 10; i++) {
+			cout << v[i];
+		}
+	}
+
+int main()
+{
+	solve();
+}
+
+44) 
